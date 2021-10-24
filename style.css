@@ -1,0 +1,161 @@
+/*Commented code @line80*/
+*{
+  margin: 0;
+}
+html,
+body {
+  --black: hsl(240, 6%, 13%,);
+  --gray: hsl(240, 9%, 89%);
+  height = 100%;
+  font-family: "Source Code Pro" , sans-serif; 
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg) no-repeat;
+  width: 375px;
+  height: 875px;
+}
+
+.container{
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--gray);
+}
+.avatar { 
+  width:10rem;
+  margin: 11.5rem auto 0;
+  position: relative;
+}
+
+.avatar span {
+  position: absolute; 
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img { 
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; 
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); 
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem; 
+}
+
+a { 
+  color: var(--gray);
+  text-decoration: none;
+  margin-top: 0.25rem; 
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+p {
+  margin-top: 2rem; 
+}
+
+ul {
+  margin-top: 4rem; 
+  list-style: none;
+  padding: 0; 
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+
+ 
+
+/* This is how you comment in CSS. While inside the <style> tag, only CSS is valid. CSS means Cascating Stylesheet, o último parâmetro tem mais força sobre os outros do mesmo tipo.
+/*Cascating Stylesheet*/
+/**{
+  /*Universal Selector: applies selected properties to all elements in the page.
+  margin: 0; /*Removes Margin
+}
+html,
+body {
+  --black: hsl(240, 6%, 13%,);
+  --gray: hsl(240, 9%, 89%);
+  height = 100%
+  font-family: 'Roboto' , sans-serif; /*font-family: 'look for this font',cantfinditusethisone;
+  -webkit-font-smoothing: antialiased; /*webkit property uses font smoothing for certain browsers. Goes into container.
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background: url(images/background.svg) no-repeat;
+  width: 375px;
+  height: 875px;
+}
+
+.container{
+  /*Setting up classes for cointainer rectangle located at Figma.
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /*Box Model: these commands define margin and alignment. Right click on browser page and Inspect for more info.
+  color: var(--gray); /*Uses variable --gray, previously defined to change text color.
+}
+.avatar { /*Avatar <> in HTML
+  width:10rem; /*rem=10*px
+  margin: 11.5rem auto 0; /*move avatar image: top, right, bottom, left
+  position: relative; /*allows User Image to be the considered margin for Rocketseat's Seal.
+}
+
+.avatar span { /*look for what's inside span in avatar.(HTML)
+  position: absolute; /*allows images to be on top of each other.
+  top: -15px; /*How much below margin Rocketseat's margin (consider User Avatar as such) should be positioned.
+  z-index: 1; /*Depth, stops Rocketseat's Sigil being placed behind User Image.
+}
+
+.avatar > img { /*look for the first image (>) presented in avatar html class.
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; /*fit's the image to set values.
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); /*https://bennettfeely.com/clippy/ build your css clip, build a path.
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem; /*Distance between profile picture and my name.
+}
+
+a { 
+  color: var(--gray);
+  text-decoration: none;
+  margin-top: 0.25rem; /*Distance between my name and github username <p>.
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  /*distance github icon to github username
+}
+
+p {
+  margin-top: 2rem; /*Distance between paragraph and links.
+}
+
+ul {
+  margin-top: 4rem; /*distance between links and paragraph
+  list-style: none; /*no bulleted list
+  padding: 0; 
+  display: flex; /*side by side
+  gap: 0.5rem; /*little distance between each link image
+  justify-content: center; /*centralize (X axis)
+}
